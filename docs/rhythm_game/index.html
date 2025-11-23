@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<div class="stat-box">Score: <span id="score">0</span></div>
-<div class="stat-box">Mistakes: <span id="mistakes">0</span>/10</div>
-</div>
-<canvas id="gameCanvas" width="400" height="600"></canvas>
-<div class="controls-hint">
-    <span>A</span>
-    <span>S</span>
-    <span>D</span>
-    <span>F</span>
-</div>
-<div id="gameOverModal" class="modal hidden">
-    <div class="modal-content">
-        <h2>Game Over!</h2>
-        <p>Final Score: <span id="finalScore">0</span></p>
-        <button onclick="location.reload()">Play Again</button>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm Circle Game</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Rhythm Circles</h1>
+        <div class="stats">
+            <div class="stat-box">Score: <span id="score">0</span></div>
+            <div class="stat-box">Mistakes: <span id="mistakes">0</span>/10</div>
+        </div>
+        <canvas id="gameCanvas" width="400" height="600"></canvas>
+        <div class="controls-hint">
+            <span>A</span>
+            <span>S</span>
+            <span>D</span>
+            <span>F</span>
+        </div>
+        <div id="gameOverModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <button onclick="location.reload()">Play Again</button>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-<script src="{{ url_for('static', filename='game.js') }}"></script>
+    <script src="static/game.js"></script>
 </body>
 
 </html>
