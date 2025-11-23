@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<div class="stat-box">Score: <span id="score">0</span></div>
+<div class="stat-box">Mistakes: <span id="mistakes">0</span>/10</div>
+</div>
+<canvas id="gameCanvas" width="400" height="600"></canvas>
+<div class="controls-hint">
+    <span>A</span>
+    <span>S</span>
+    <span>D</span>
+    <span>F</span>
+</div>
+<div id="gameOverModal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+</div>
+</div>
+<script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+
+</html>

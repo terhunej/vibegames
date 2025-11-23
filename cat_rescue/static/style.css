@@ -1,0 +1,85 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+    color: #006064;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0px #fff;
+}
+
+canvas {
+    background: linear-gradient(to bottom, #81d4fa, #b2ebf2);
+    border: 4px solid #006064;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#ui-layer {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 0 auto 5px;
+    font-weight: bold;
+    color: #006064;
+}
+
+#instructions {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+#message-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    border: 4px solid #006064;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Fredoka One', cursive;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+button:hover {
+    background-color: #00838f;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}

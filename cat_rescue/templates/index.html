@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Rescue</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Cat Rescue</h1>
+        <div id="ui-layer">
+            <div id="level-info">Level: <span id="level-display">1</span></div>
+            <div id="cats-info">Cats Rescued: <span id="cats-rescued">0</span> / <span id="cats-total">1</span></div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="instructions">
+            <p><strong>Controls:</strong></p>
+            <p>Arrow Keys: Move Cat</p>
+            <p>Q: Pick up/Drop Object</p>
+            <p>WASD: Move Object</p>
+        </div>
+        <div id="message-overlay" class="hidden">
+            <h2 id="message-title">Level Complete!</h2>
+            <button id="next-level-btn">Next Level</button>
+            <button id="restart-btn" class="hidden">Try Again</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
