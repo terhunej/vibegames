@@ -41,12 +41,11 @@ export const SHIP_STATS = {
 };
 
 export const ASSETS = {
-    SHIP: '/static/assets/ship.png',
-    ALIEN_BASIC: '/static/assets/alien_basic.png',
-    ALIEN_MODERATE: '/static/assets/alien_moderate.png',
-    ALIEN_MODERATE: '/static/assets/alien_moderate.png',
-    ALIEN_STRONG: '/static/assets/alien_strong.png',
-    ALIEN_BOSS_ONE: '/static/assets/alien_boss_one.png'
+    SHIP: 'static/assets/ship.png',
+    ALIEN_BASIC: 'static/assets/alien_basic.png',
+    ALIEN_MODERATE: 'static/assets/alien_moderate.png',
+    ALIEN_STRONG: 'static/assets/alien_strong.png',
+    ALIEN_BOSS_ONE: 'static/assets/alien_boss_one.png'
 };
 
 export const ALIEN_STATS = {
