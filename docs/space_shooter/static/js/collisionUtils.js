@@ -42,6 +42,10 @@ export function getPixelData(img, width, height) {
     offscreenCanvas.width = width;
     offscreenCanvas.height = height;
 
+    if (width === 0 || height === 0) {
+        return null;
+    }
+
     // Draw the image to the off-screen canvas
     offscreenCtx.clearRect(0, 0, width, height);
     offscreenCtx.drawImage(img, 0, 0, width, height);
