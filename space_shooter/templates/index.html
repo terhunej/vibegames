@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div id="game-container">
+        <div id="title-screen">
+            <h1>Space Shooter</h1>
+            <div class="controls-info">
+                <p>Arrow Keys to Move</p>
+                <p>Space to Shoot</p>
+                <p>Shift to Shield</p>
+            </div>
+            <div class="difficulty-select">
+                <button id="btn-easy" class="diff-btn">Easy</button>
+                <button id="btn-normal" class="diff-btn">Normal</button>
+                <button id="btn-hard" class="diff-btn">Hard</button>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="1200" height="900"></canvas>
+        <div id="ui-layer" class="hidden">
+            <div id="score">Souls: 0</div>
+            <div id="health">HP: 10</div>
+            <div id="shield">Shield: 5</div>
+            <div id="wave">Level: 1 - Wave: 1</div>
+        </div>
+        <div id="game-over-screen" class="hidden">
+            <h1>Game Over</h1>
+            <p id="final-score">Souls Collected: 0</p>
+            <button onclick="location.reload()">Restart</button>
+        </div>
+        <div id="shop-screen" class="hidden">
+            <h1>Shop</h1>
+            <p id="shop-souls">Souls: 0</p>
+            <p id="shop-hp">HP: 10/10</p>
+            <div class="shop-items">
+                <button id="btn-heal" class="shop-btn">Heal 1 HP (5 Soul)</button>
+                <button id="btn-max-hp" class="shop-btn">Max HP +1 (15 Souls)</button>
+                <button id="btn-shield-regen" class="shop-btn">Shield Regen -1s (20 Souls)</button>
+                <button id="btn-shield-fire" class="shop-btn">Shielded Fire Rate +5% (20 Souls)</button>
+                <button id="btn-laser-size" class="shop-btn">Laser Size +20% (10 Souls)</button>
+                <button id="btn-cannon-damage" class="shop-btn">Cannon Damage +1 (100 Souls)</button>
+            </div>
+            <button id="btn-next-level" class="next-level-btn">Start Next Level</button>
+        </div>
+        <div id="level-transition-screen" class="hidden">
+            <h1 id="level-title">Level 1 Completed!</h1>
+        </div>
+        <div id="victory-screen" class="hidden">
+            <h1>Victory!</h1>
+            <p>You survived all levels!</p>
+            <p id="victory-score">Souls Collected: 0</p>
+            <button onclick="location.reload()">Play Again</button>
+        </div>
+    </div>
+    <script type="module" src="/static/js/game.js"></script>
+</body>
+
+</html>
