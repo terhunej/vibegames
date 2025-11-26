@@ -36,6 +36,19 @@ export const SHIP_STATS = {
     HP: 10,
     COOLDOWN: 20,
     BULLET_SPEED: 5,
+    X: 50,
+    Y_OFFSET: 20
+};
+
+export const ASSETS = {
+    SHIP: 'static/assets/ship.png',
+    ALIEN_BASIC: 'static/assets/alien_basic.png',
+    ALIEN_MODERATE: 'static/assets/alien_moderate.png',
+    ALIEN_STRONG: 'static/assets/alien_strong.png',
+    ALIEN_BOSS_ONE: 'static/assets/alien_boss_one.png'
+};
+
+export const ALIEN_STATS = {
     BASIC: {
         width: 50, height: 32, hp: 1, score: 10, soulValue: 1,
         fireInterval: 240, fireIntervalVariance: 60, bulletSpeed: -2,
